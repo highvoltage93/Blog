@@ -1,0 +1,15 @@
+.nav-wrapper .brand-logo {
+    left: 20px;
+}
+
+.nav-wrapper li a.active {
+    background: #00bcd4;
+}
+
+.nav-wrapper {
+    padding-right: 30px;
+}
+
+.nav-wrapper {
+    background-image: linear-gradient(to right, #4db6ac, #36c1b2, #42c3b4, #197c6f, #00695c);
+}

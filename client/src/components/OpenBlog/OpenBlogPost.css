@@ -1,0 +1,29 @@
+.openPost img {
+    margin-top: 30px;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.openPost h1 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.openPost p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.back {
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    top: 95px;
+    left: 20px;
+    background: linear-gradient(90deg, rgba(89, 188, 214, 1) 0%, rgba(59, 195, 164, 1) 61%);
+}

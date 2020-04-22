@@ -2,6 +2,13 @@
     text-align: center;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
 body {
     background-image: linear-gradient(to right, #fbe9e7, #fae9ef, #f5ebf7, #eceffd, #e3f2fd);
 }

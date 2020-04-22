@@ -21,7 +21,7 @@ export const Header = (props) => {
                          ? <span> <li><NavLink exact  to="/registration">Registration</NavLink></li>
                             <li><NavLink exact  to="/login">Log in</NavLink></li>
                             </span>
-                         : <li>{props.userName}</li>
+                         : <li className="prof">{props.userName} <img className="small_avatar" src={props.avatar} alt=""/></li>
                     }
                 </ul>
             </div>

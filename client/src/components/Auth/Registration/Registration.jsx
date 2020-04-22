@@ -7,7 +7,8 @@ const Registration = (props) => {
         const user = {
             name: e.target.name.value,
             email: e.target.email.value,
-            password: e.target.password.value
+            password: e.target.password.value,
+            avatar: e.target.avatar.files[0]
         }
         props.setAuth(user)
     }
@@ -34,6 +35,12 @@ const Registration = (props) => {
                         <label htmlFor="password">Password</label>
                     </div>
                 </div>
+                <div className="row">
+                <div className="input-field col s12">
+                    <input id="avatar" type="file" className="validate" />
+                    <label htmlFor="avatar">Your Avatar</label>
+                </div>
+            </div>
                 <button className="waves-effect waves-light btn-small cyan lighten-1">Registration</button>
             </form>
         </div>

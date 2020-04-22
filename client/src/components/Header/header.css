@@ -13,3 +13,16 @@
 .nav-wrapper {
     background-image: linear-gradient(to right, #4db6ac, #36c1b2, #42c3b4, #197c6f, #00695c);
 }
+
+.small_avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin: 0 10px;
+    object-fit: cover;
+}
+
+.prof {
+    display: flex;
+    align-items: center;
+}

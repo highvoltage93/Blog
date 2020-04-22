@@ -50,7 +50,8 @@ router.post('/register', upload.single('avatar'), (req, res) => {
                                         user: {
                                             id: user.id,
                                             name: user.name,
-                                            email: user.email
+                                            email: user.email,
+                                            avatar: user.avatar
                                         }
                                     })
                                 }
@@ -85,7 +86,8 @@ router.post('/logIn', (req, res) => {
                                 user: {
                                     id: user.id,
                                     name: user.name,
-                                    email: user.email
+                                    email: user.email,
+                                    avatar: user.avatar
                                 }
                             })
                         }

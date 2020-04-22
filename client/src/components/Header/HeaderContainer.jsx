@@ -12,7 +12,8 @@ const HeaderContainer = (props) => {
 
 let mapStateToProps = (state) => {
     return {
-        userName: state.auth.name
+        userName: state.auth.name,
+        avatar: state.auth.avatar
     }
 }
  

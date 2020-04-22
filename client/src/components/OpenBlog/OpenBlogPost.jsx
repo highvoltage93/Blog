@@ -4,7 +4,7 @@ import Preloader from '../Other/Preloader/Preloader'
 import { NavLink } from 'react-router-dom'
 
 const OpenPost = (props) => {
-    let post = props.post === undefined ? <Preloader/> : props.post.map(el => {
+    let post = props.post === 0 ? <Preloader/> : props.post.map(el => {
         return <div key={el._id} className="openPost">
             <img src={el.img} alt="" />
             <h1>{el.title}</h1>

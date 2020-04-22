@@ -23,10 +23,17 @@ server.listen(config.get('PORT'), () => {
     console.log(`server start on ${config.get('PORT')}`)
 })
 
-server.use('/uploads', express.static('uploads'))
+
+
 server.use(express.json())
 server.use('/', blogRoute)
 server.use('/auth/', authRoute)
 server.use('/authors/', authorsRoute)
-    // npm run start
-    // npm run dev  --MERN
+server.use('/uploads', express.static('uploads'))
+    // server.use(express.static('/uploads'))
+
+
+
+
+// npm run start
+// npm run dev  --MERN

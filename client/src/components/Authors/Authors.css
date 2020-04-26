@@ -1,11 +1,14 @@
 .authors {
     padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .authors-item {
-    padding: 10px 20px;
+    padding: 5px 10px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 49%;
     display: flex;
     box-shadow: 0 0 20px rgba(0, 0, 0, .2);
     border-radius: 5px;
@@ -13,7 +16,7 @@
 
 .authors-item img {
     width: 120px;
-    height: 120px;
+    height: 105px;
     border-radius: 5px;
     margin-right: 50px;
     object-fit: cover;
@@ -27,13 +30,13 @@
 }
 
 .authors-item .self {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
     display: block;
 }
 
 .authors-item .posts {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
 }
 

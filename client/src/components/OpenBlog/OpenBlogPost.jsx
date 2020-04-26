@@ -1,9 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './OpenBlogPost.css'
 import Preloader from '../Other/Preloader/Preloader'
 import { NavLink } from 'react-router-dom'
 
-const OpenPost = (props) => {
+const OpenPost = React.memo((props) => {
+
+    useEffect(() => {
+        return () => {
+            console.log('will unmount');
+        }
+        }, []);
+
+
     let post = props.post === 0 ? <Preloader/> : props.post.map(el => {
         return <div key={el._id} className="openPost">
             <img src={el.img} alt="" />
@@ -20,6 +28,6 @@ const OpenPost = (props) => {
             }
         </>
     )
-}
+})
 
 export default OpenPost

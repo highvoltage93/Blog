@@ -1,3 +1,5 @@
+const mongoose = require('mongoose')
+
 let { Schema, model } = require('mongoose')
 
 const blogSchema = new Schema({
@@ -22,7 +24,8 @@ const blogSchema = new Schema({
     },
     author: {
         id: {
-            type: Schema.Types.ObjectId,
+            // type: Schema.Types.ObjectId,
+            type: mongoose.Types.ObjectId,
             ref: 'Users'
         },
         authorName: {

@@ -10,12 +10,13 @@ const LoginContainer = (props) => {
 }
 
 
-// let mapStateToProps = (state) => {
-//     return {
-//         items: state.blogs.blogs,
-//         post: state.blogs.post
-//     }
-// }
+let mapStateToProps = (state) => {
+    return {
+        loginSucces: state.auth.loginSucces
+    }
+}
+
+
 
 let mapDispatchToProps = (dispatch) => {
     return {
@@ -25,4 +26,4 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(LoginContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer)

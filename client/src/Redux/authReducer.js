@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const SET_AUTH = 'SET_AUTH'
 const LOGIN = 'LOGIN'
+const LOGINSUCCES = 'LOGINSUCCES'
 
 const initialState = {
     isAuthorized: false,
@@ -9,7 +10,8 @@ const initialState = {
     email: null,
     avatar: null,
     token: localStorage.getItem("token"),
-    name: null
+    name: null,
+    loginSucces: false
 }
 
 export const authReducer = (state = initialState, action) => {
@@ -25,6 +27,11 @@ export const authReducer = (state = initialState, action) => {
                 token: action.token,
                 isAuthorized: true
             }
+        case LOGINSUCCES:
+            return {
+                ...state,
+                loginSucces: true
+            }
         default:
             return state;
     }
@@ -33,6 +40,7 @@ export const authReducer = (state = initialState, action) => {
 
 const setAuthAC = (id, email, name, token, avatar) => ({ type: SET_AUTH, id, email, name, token, avatar })
 const logInAC = (id, name, email, avatar, token) => ({ type: LOGIN, id, name, email, avatar, token })
+const loginSuccesAC = () => ({type:LOGINSUCCES, loginSucces: true})
 
 
 export const setAuthThunk = (user) => {
@@ -51,8 +59,9 @@ export const setAuthThunk = (user) => {
             .then(res => {
                 let { id, email, name, avatar } = res.data.user;
                 if (res.status === 200) {
+                    debugger
                     dispatch(setAuthAC(id, email, name, avatar))
-                    localStorage.setItem("token", res.data.token)
+                    localStorage.setItem("token", JSON.stringify({userId: res.data.user.id, token: res.data.token  }) )
                 }
             })
     }
@@ -70,6 +79,7 @@ export const logIn = (user) => {
                 let { id, name, email, avatar } = res.data.user
                 let token = res.data.token
                 dispatch(logInAC(id, name, email, avatar, token))
+                dispatch(loginSuccesAC())
             })
     }
 }

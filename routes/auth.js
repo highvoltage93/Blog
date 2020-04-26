@@ -97,6 +97,7 @@ router.post('/logIn', (req, res) => {
 })
 
 
+
 router.get('/user', (req, res) => {
     User.findById(req.user.id)
         .select('-password')

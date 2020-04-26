@@ -1,3 +1,5 @@
+const mongoose = require('mongoose')
+
 let { Schema, model } = require('mongoose')
 
 const userSchema = new Schema({
@@ -22,7 +24,11 @@ const userSchema = new Schema({
     avatar: {
         type: String,
         default: ''
-    }
+    },
+    blogs: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'BlogSchema'
+    }]
 })
 
 
